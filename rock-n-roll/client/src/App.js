@@ -1,12 +1,19 @@
-import logo from "./logo.svg";
+import { Provider } from "react-redux";
 import "./App.css";
 import CreateStudent from "./pages/CreateStudent";
+import store from "./redux/store";
+import Counter from "./pages/Counter";
+import Users from "./pages/Users";
 
 function App() {
   return (
-    <div className="App">
-      <CreateStudent/>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        {/* <CreateStudent /> */}
+        <Counter />
+        <Users/>
+      </div>
+    </Provider>
   );
 }
 
